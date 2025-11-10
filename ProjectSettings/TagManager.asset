@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Trick
   - Spawn
+  - Ladder
+  - Snow
+  - TrickSnow
+  - Cloud
   layers:
   - Default
   - TransparentFX
