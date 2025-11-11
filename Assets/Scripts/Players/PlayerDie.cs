@@ -26,6 +26,7 @@ public class PlayerDie : MonoBehaviour
     {
         if (collision.CompareTag("Trick") && isDie == false)
         {
+            SoundManager.Instance.Play(SoundType.SFX, "Damage");
             isDie = true;
             animator.SetFloat(ANIMA_SPEED_NAME, 0);
             Destroy(gameObject.GetComponent<Rigidbody2D>());
@@ -41,6 +42,7 @@ public class PlayerDie : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("TrickSnow") && isDie == false)
         {
+            SoundManager.Instance.Play(SoundType.SFX, "Damage");
             isDie = true;
             animator.SetFloat(ANIMA_SPEED_NAME, 0);
             Destroy(gameObject.GetComponent<Rigidbody2D>());

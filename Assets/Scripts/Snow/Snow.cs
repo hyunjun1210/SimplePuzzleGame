@@ -79,10 +79,12 @@ public class Snow : MonoBehaviour
         }
         Move();
         TimeSpan time = DateTime.Now - date;
-        TimeSpan countDown = TimeSpan.FromSeconds(30) - time;
+        TimeSpan countDown = TimeSpan.FromSeconds(15) - time;
 
         if (countDown.TotalSeconds <= 0)
         {
+            SoundManager.Instance.AllStop();
+            SoundManager.Instance.Play(SoundType.SFX, "Clear");
             text.text = "°ÔÀÓ ½Â¸®!";
             ObjectPoolManager.Instance.ReturnObject(gameObject, 0);
             clear.SetActive(true);

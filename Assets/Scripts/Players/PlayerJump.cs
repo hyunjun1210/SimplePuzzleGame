@@ -32,6 +32,7 @@ public class PlayerJump : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && m_isJumping == false)
         {
             m_rigidbody.AddForceY(m_jumpPower, ForceMode2D.Impulse);
+            SoundManager.Instance.Play(SoundType.SFX, "Jump");
         }
     }
 }

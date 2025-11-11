@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class ClearButton : MonoBehaviour
 {
+
     public void Restart()
     {
         SceneManager.LoadScene(0);
